@@ -33,3 +33,4 @@ FLUSH PRIVILEGES;
 También habría que añadir esto en la parte de código de conexión a la base de datos para que funcione:
 auth_plugin='mysql_native_password'
 
+También adjunto pdf del trabajo.
