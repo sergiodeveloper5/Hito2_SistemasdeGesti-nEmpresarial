@@ -1,1 +1,1 @@
-# Hito2_SistemasdeGesti-nEmpresarial
+# Hito2_SistemasdeGestionEmpresarial
