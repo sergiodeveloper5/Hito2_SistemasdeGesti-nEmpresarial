@@ -11,8 +11,7 @@ instrucciones claras sobre cómo configurar y ejecutar el proyecto, incluyendo:
 ## Configuración e Instalación
 Para ejecutar este proyecto, se requiere la instalación de python 3.10+
 
-Para que el programa funcione correctamente habría que ejecutar en comandos:
-
+Para que el programa funcione correctamente habría que ejecutar en comandos estos pip installs que garantizan que las bibliotecas necesarias estén disponibles para ejecutar las funcionalidades del proyecto (base de datos, gráficos, y exportación).
 
 -pip install mysql-connector-python
 -Alomejor también pip install mysql.connector
@@ -26,9 +25,11 @@ Crear la base de datos ENCUESTAS usando el sql del proyecto.
 
 Si da error de caching_sha2_password al ejectar el main.py significa que te ha puesto un codificador de contraseña automáticamente y lo que necesitas esla contraseña de origen, entonces hay que usar este alter table para que se quede con su contraseña sin codificar:
 
+Este ALTER TABLE corrige problemas en la estructura de la base de datos, asegurando que se puedan insertar datos sin conflictos.
+
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'tu_password';
 FLUSH PRIVILEGES;
 
-
 También habría que añadir esto en la parte de código de conexión a la base de datos para que funcione:
 auth_plugin='mysql_native_password'
+
